@@ -1,0 +1,20 @@
+A virtual Stock trading application in Golang
+
+System uses real time pricing from Yahoo Finance Api.
+There are two features in the system:-
+a. Buying Stocks-
+Request:-
+“stockSymbolAndPercentage”: string (E.g. “GOOG:50%,YHOO:50%”)
+“budget” : float32
+Response:-
+“tradeId”: number
+“stocks”: string (E.g. “GOOG:100:$500.25”, “YHOO:200:$31.40”)
+“unvestedAmount”: float32
+
+b. Checking portfolio(loss/gain)
+Request:-
+“tradeId”: number
+Response:-
+“stocks”: string (E.g. “GOOG:100:+$520.25”, “YHOO:200:-$30.40”)
+“currentMarketValue” : float32
+“unvestedAmount”: float32
